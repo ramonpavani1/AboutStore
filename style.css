@@ -1,0 +1,108 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3, p {
+    text-align: center;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+/* Seção Sobre a Loja */
+.sobre-loja {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.sobre-loja img {
+    width: 100%;
+    height: 400px;
+}
+
+.sobre-loja .sobre-texto {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Seção de Produtos */
+.produtos {
+    margin-bottom: 40px;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.produto {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer{
+    text-align: center;
+
+}
+
+/* Media Queries */
+
+/* Tablet (641px a 1023px) */
+@media (max-width: 1023px) {
+    .sobre-loja {
+        flex-direction: column;
+    }
+
+    .grid-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile (até 640px) */
+@media (max-width: 640px) {
+    .grid-produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-loja {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-loja img {
+        max-width: 100%;
+    }
+}
